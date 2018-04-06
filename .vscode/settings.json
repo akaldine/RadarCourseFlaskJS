@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.shellArgs.windows": [
+        "\/K",
+        "C:\\ProgramData\\Anaconda3\\Scripts\\activate.bat",
+        "C:\\Users\\kala\\Desktop\\condaenv"
+    ],
+    "terminal.integrated.env.windows": {
+        "FLASK_APP":"test.py",
+        "FLASK_DEBUG":"1"
+    }
+}
