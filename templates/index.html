@@ -10,10 +10,10 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'normalize.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'main.css') }}">
-        <script src="{{ url_for('static', filename = 'main.js') }}"></script>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">        
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/jquery-ui.min.css') }}">        
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -21,28 +21,50 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
-        <p>Start Time</p>
-        <input type="text" id="StartTime">
-        <p>End Time</p>
-        <input type="text" id="EndTime">
-        <p>Time Resolution</p>
-        <input type="text" id="TimeRes">
-        <p>Period</p>
-        <input type="text" id="Period">
-        <p>Tx Start Time</p>
-        <input type="text" id="TxStartTime">
-        <p>Delay</p>
-        <input type="text" id="Delay">
-        <div id="tester" style="width:600px;height:250px;"></div>
+        <div class="slider-container">
+            <p>Start Time</p>
+            <!-- <input type="range" id="StartTime" value="0"> -->
+            
+            <p>End Time</p>
+            <!-- <input type="range" id="EndTime" value="27"> -->
+            
+            <p>Time Resolution</p>
+            <!-- <input type="range" id="TimeRes" value="1"> -->
+            
+            <p>Period</p>
+            <!-- <input type="range" id="Period" value="10"> -->
+            
+            <p>Tx Start Time</p>
+            <!-- <input type="range" id="TxStartTime" value="0"> -->
+            
+            <p>Rx Time Offset</p>
+            <!-- <input type="range" id="RxTOffset" value="3"> -->
+            
+            <p>Rx Frequency Offset</p>
+            <!-- <input type="range" id="RxFOffset" value="2"> -->
+            
+            <p>Bandwidth</p>
+            <!-- <input type="range" id="BandWidth" value="10"> -->
+            <div id="StartTime" style="height:200px;"></div>
+            <div id="EndTime" style="height:200px;"></div>
+            <div id="TimeRes" style="height:200px;"></div>
+            <div id="Period" style="height:200px;"></div>
+            <div id="TxStartTime" style="height:200px;"></div>
+            <div id="RxTOffset" style="height:200px;"></div>
+            <div id="RxFOffset" style="height:200px;"></div>
+            <div id="BandWidth" style="height:200px;"></div>
+        </div>    
+        <div id="SignalsPlot" style="width:600px;height:250px;"></div>
+        <div id="DiffPlot" style="width:600px;height:250px;"></div>
         <button onclick="plotpic()">Submit</button>
 
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="{{ url_for('static', filename = 'modernizr-3.5.0.min.js') }}"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="{{ url_for('static', filename = 'plugins.js') }}"></script>
-        <script src="{{ url_for('static', filename = 'plotting.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/modernizr-3.5.0.min.js') }}"></script>        
+        <script src="{{ url_for('static', filename = 'js/plotly-latest.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/plugins.js') }}"></script>       
+        <script src="{{ url_for('static', filename = 'js/jquery-ui.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/plotting.js') }}"></script>        
         <script>
 
         </script>

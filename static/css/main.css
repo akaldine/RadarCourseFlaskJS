@@ -96,7 +96,13 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.slider-container{
+    display:grid;
+    height:300px;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+}
 
 
 
